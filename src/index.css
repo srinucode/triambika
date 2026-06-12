@@ -1,0 +1,655 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #1c1c1c;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1c1c1c;
+}
+
+.brand-highlight {
+  color: #fc8019;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #fc8019;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #fff2e6, #ffffff);
+  padding: 56px 0 44px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  margin: 0 0 12px;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #1c1c1c;
+}
+
+.hero-content p {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Section */
+.section {
+  padding: 40px 0 60px;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #666;
+}
+
+/* Food Grid */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.food-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.food-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.food-card-body {
+  padding: 16px;
+}
+
+.food-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.food-top-row h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+.food-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fc8019;
+  white-space: nowrap;
+}
+
+.food-category {
+  margin: 0 0 16px;
+  color: #777;
+  font-size: 15px;
+}
+
+/* Buttons */
+.primary-btn,
+button {
+  background: #fc8019;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.primary-btn:hover,
+button:hover {
+  background: #e56f0c;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  margin: 8px 0 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #fc8019;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .hero {
+    padding: 40px 0 28px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
+  }
+
+  .food-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-image {
+    height: 190px;
+  }
+
+  .food-top-row h3 {
+    font-size: 18px;
+  }
+
+  .food-price {
+    font-size: 18px;
+  }
+}
+
+/* Catering */
+.package-desc {
+  color: #555;
+  line-height: 1.5;
+  font-size: 15px;
+  margin: 0 0 14px;
+}
+
+.included-box {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.included-box strong {
+  color: #9a3412;
+}
+
+.included-box p {
+  margin: 6px 0 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Auth */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff7ed, #ffffff);
+  padding: 32px 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  background: white;
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.auth-header {
+  margin-bottom: 24px;
+}
+
+.auth-header h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+}
+
+.auth-header p {
+  margin: 0;
+  color: #666;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Admin */
+.admin-page {
+  background: #f8f8f8;
+}
+
+.admin-header {
+  padding: 40px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-header h1 {
+  margin: 0 0 8px;
+  font-size: 38px;
+}
+
+.admin-header p {
+  margin: 0;
+  color: #666;
+}
+
+.logout-btn {
+  background: #111827;
+}
+
+.logout-btn:hover {
+  background: #000;
+}
+
+.admin-panel {
+  padding-bottom: 60px;
+}
+
+.tab-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: white;
+  color: #333;
+  border: 1px solid #e5e7eb;
+}
+
+.active-tab {
+  background: #fc8019;
+  color: white;
+  border-color: #fc8019;
+}
+
+.form-card {
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.form-subtitle {
+  margin: 0 0 24px;
+  color: #666;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  max-width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+/* Mobile admin */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-header h1 {
+    font-size: 30px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 22px;
+  }
+
+  .auth-card {
+    padding: 24px;
+  }
+}
+
+.food-card {
+  height: 100%;
+}
+
+.food-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.package-desc {
+  min-height: 45px;
+}
+
+.included-box {
+  min-height: 80px;
+}
+
+.food-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-category {
+  margin-bottom: 14px;
+}
+
+.primary-btn {
+  width: fit-content;
+  min-width: 130px;
+}
+
+.food-card .primary-btn {
+  margin-top: auto;
+}
+
+.section {
+  padding-top: 48px;
+}
+
+.food-grid {
+  align-items: stretch;
+}
+
+.food-card-body {
+  min-height: 160px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 0 32px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .section {
+    padding-top: 32px;
+  }
+
+  .food-card-body {
+    min-height: auto;
+  }
+}
+
+.manage-section {
+  margin-top: 32px;
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.manage-section h2 {
+  margin: 0 0 20px;
+  font-size: 26px;
+}
+
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 15px;
+}
+
+.admin-table th {
+  background: #fff7ed;
+  color: #9a3412;
+  font-weight: 700;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.available-badge {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.unavailable-badge {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.small-btn {
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+.edit-btn {
+  background: #2563eb;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.status-btn {
+  background: #111827;
+}
+
+.status-btn:hover {
+  background: #000000;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.cancel-btn {
+  background: #6b7280;
+  margin-left: 10px;
+}
+
+.cancel-btn:hover {
+  background: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .manage-section {
+    padding: 20px;
+  }
+
+  .admin-table {
+    min-width: 680px;
+  }
+
+  .cancel-btn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.navbar {
+  background: #111827;
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.page {
+  padding: 24px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  margin: 12px;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input,
+textarea,
+select {
+  padding: 10px;
+  margin: 8px 0;
+  width: 300px;
+  display: block;
+}
+
+button {
+  padding: 10px 16px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+button.delete {
+  background: #dc2626;
+}
+
+button.secondary {
+  background: #2563eb;
+}
